@@ -1,0 +1,26 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+.header {
+   padding: 50px 0 74px;
+   display: flex;
+   justify-content: center;
+
+   background: linear-gradient(112.21deg, rgba(31, 31, 31, 0.91) 2.72%, rgba(18, 18, 18, 0.91) 101.59%);
+
+
+}
+
+.container {
+   max-width: 1660px;
+
+   // padding: 0 15px 0;
+
+   // margin: 0 auto;
+}
+
+.headerWrap {
+   @include flexEdit(space-between, center);
+
+
+}

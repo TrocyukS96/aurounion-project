@@ -1,0 +1,82 @@
+@import './../../../assets/abstracts/mixins.scss';
+@import './../../../assets/abstracts/vars.scss';
+
+.buttonBLock {
+   @include flexEdit(center, center);
+
+   & div {
+      margin-right: 2.6rem;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+.langBlock {
+   max-width: 6.2rem;
+   @include flexEdit(space-between, center);
+
+}
+
+.eng,
+.rus {
+
+
+   color: $linkColor;
+
+   &:active {
+      color: $whiteColor;
+   }
+
+}
+
+.eng {
+   position: relative;
+
+   &::after {
+      content: "";
+
+      width: 2px;
+      height: 16px;
+
+      background-color: $whiteColor;
+
+      position: absolute;
+      top: 3px;
+      bottom: 0;
+      right: -1px;
+   }
+}
+
+.statisticBlock {
+   position: relative;
+}
+
+.statisticBlock span {
+   display: block;
+   background-color: #E13A3A;
+
+   width: 19px;
+   height: 19px;
+
+   padding-left: 5px;
+
+   line-height: 19px;
+
+   position: absolute;
+   bottom: -6px;
+   left: 0;
+
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+
+.statistic {
+   background-color: transparent;
+
+
+}

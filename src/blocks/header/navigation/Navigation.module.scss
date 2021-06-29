@@ -1,0 +1,38 @@
+@import './../../../assets/abstracts/mixins.scss';
+@import './../../../assets/abstracts/vars.scss';
+
+// .navMenu {}
+
+.navList {
+   display: flex;
+}
+
+.navItem {
+   margin-right: 3.75rem;
+   transition: all .3s ease-in-out;
+
+   &:last-child {
+      margin-right: 5.6rem;
+   }
+
+   &:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+   }
+
+
+}
+
+.navLink {
+   @include textEdit(Noto Sans, 400, 0.9rem);
+   color: $linkColor;
+
+
+
+   &:active {
+      color: $whiteColor;
+   }
+}
