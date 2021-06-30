@@ -1,0 +1,49 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+.card {
+   max-width: 775px;
+}
+
+.title {
+
+
+   margin-bottom: .5rem;
+   @include textEdit(Quicksand, 700, 4.5rem, 1);
+
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+
+   color: $whiteColor;
+}
+
+.text {
+   margin-bottom: 30px;
+
+   @include textEdit(Quicksand, 400, 1.25rem, 1);
+
+   letter-spacing: 0.05em;
+
+   color: $whiteColor;
+
+
+}
+
+.btnLeft,
+.btnRight {
+   width: 360px;
+   height: 60px;
+
+   @include textEdit(Quicksand, 700, 1.25rem, 1);
+
+   text-align: center;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+
+   color: $whiteColor;
+
+}
+
+.btnLeft {
+   border: 2px solid $whiteColor;
+}

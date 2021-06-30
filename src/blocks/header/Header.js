@@ -11,10 +11,11 @@ import ButtonBlock from './buttonBlock/ButtonBlock';
 function Header() {
    return (
       <header className={s.header}>
-         <BurgerMenu />
-         <BurgerButton />
+
          <div className={s.container}>
             <div className={s.headerWrap}>
+               <BurgerMenu />
+               <BurgerButton />
                <Logo />
                <Navigation />
                <ButtonBlock />

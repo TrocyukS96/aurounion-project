@@ -1,0 +1,130 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+.main {
+   background-image: url('./../../assets/images/main/main-bg.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+   min-height: 100vh;
+
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+
+}
+
+.container {
+   max-width: 1660px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+
+}
+
+.mainWrap {
+   margin-top: 25%;
+
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   z-index: 2;
+}
+
+
+
+.socialBox {
+   margin-top: 20%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+
+
+   &::before {
+      content: "";
+      width: 1px;
+      height: 140px;
+      background-color: $whiteColor;
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      z-index: 2;
+   }
+}
+
+.socialLink {
+   margin-bottom: 29px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+
+   &:hover {
+      background-color: #292525;
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+   }
+
+   &:active {
+      background-color: #a50c0c;
+   }
+}
+
+
+.shadowBox {
+   background: rgb(20, 19, 19);
+   opacity: 0.9;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   transition: all .6s ease-in;
+   -webkit-transition: all .6s ease-in;
+   -moz-transition: all .6s ease-in;
+   -ms-transition: all .6s ease-in;
+   -o-transition: all .6s ease-in;
+}
+
+.circleBox {
+   display: block;
+   position: absolute;
+   z-index: 3;
+   left: 50%;
+   bottom: 5%;
+   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
+   z-index: 3;
+
+   transition: all .3s ease-in;
+
+   &:hover {
+      background-color: #fff;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+   }
+}
+
+.circleBox:hover+.shadowBox {
+   opacity: 0;
+}
