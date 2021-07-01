@@ -1,0 +1,48 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+
+.models {
+   min-height: 100vh;
+
+   background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.container {
+   max-width: 1660px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+
+   border: 2px solid green;
+}
+
+.wrap {
+   padding-top: 139px;
+   padding-bottom: 55px;
+   margin: 0 auto;
+}
+
+
+
+
+
+
+.cards {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   margin-bottom: 66px;
+}
+
+.paginationBlock {
+   color: transparent;
+}
