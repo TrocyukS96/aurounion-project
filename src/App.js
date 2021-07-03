@@ -4,6 +4,7 @@ import Header from '././blocks/header/Header.js';
 import Main from './blocks/main/Main';
 import Models from './blocks/models/Models';
 import Review from './blocks/review/Review';
+import AllModels from './blocks/allModels/AllModels';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
 <Header/>
 {/* <Main/> */}
 {/* <Models/> */}
-<Review/>
+{/* <Review/> */}
+<AllModels/>
     </div>
   );
 }

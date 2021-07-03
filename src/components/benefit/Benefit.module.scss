@@ -1,0 +1,19 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+.benefit {
+   display: flex;
+   align-items: center;
+}
+
+.benefitImg {
+   margin-right: 10px;
+}
+
+.text {
+   @include textEdit (Quicksand, 300, 1.25rem, 1);
+
+   letter-spacing: 0.05em;
+
+   color: rgba(255, 255, 255, 0.5);
+}
