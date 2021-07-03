@@ -1,0 +1,29 @@
+@import './../../../assets/abstracts/mixins.scss';
+@import './../../../assets/abstracts/vars.scss';
+
+.feature {
+   margin-bottom: 40px;
+   margin-right: 50px;
+}
+
+p {
+   margin: 0;
+   padding: 0;
+}
+
+.numb {
+
+
+   @include textEdit(Quicksand, 700, 3.75rem, 1);
+
+   letter-spacing: 0.05em;
+   color: $whiteColor;
+}
+
+.text {
+   @include textEdit(Quicksand, 700, 1.75rem, 1);
+
+
+   color: rgba(255, 255, 255, 0.55);
+
+}

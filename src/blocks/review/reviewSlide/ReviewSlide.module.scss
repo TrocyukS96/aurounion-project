@@ -1,0 +1,149 @@
+@import './../../../assets/abstracts/mixins.scss';
+@import './../../../assets/abstracts/vars.scss';
+
+
+.review {
+   padding-top: 50px;
+
+
+   height: 600px;
+}
+
+.container {
+   max-width: 1660px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+}
+
+.wrap {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   position: relative;
+}
+
+.content {
+   max-width: 510px;
+
+   .title {
+      margin-bottom: 19px;
+      @include textEdit(Quicksand, 700, 3.75rem, 1);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $whiteColor;
+   }
+
+   .text {
+      @include textEdit(Quicksand, 300, 1.25rem, 1.5);
+
+      letter-spacing: 0.05em;
+
+      color: rgba(255, 255, 255, 0.55);
+   }
+
+   .buttons {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .contentBtn {
+      width: 240px;
+      height: 60px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include textEdit(Quicksand, 700, 1.25rem, 1);
+
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: #1B1B1B;
+
+      &:first-child {
+         background-color: $whiteColor;
+
+         &:hover {
+            background-color: #1B1B1B;
+            color: #fff;
+         }
+
+
+
+      }
+
+      &:last-child {
+         color: $whiteColor;
+         border: 2px solid $whiteColor;
+
+         &:hover {
+            background-color: #fff;
+            color: #1B1B1B;
+         }
+      }
+   }
+}
+
+
+.imageBlock {
+   position: absolute;
+   top: -46px;
+   right: 8%;
+
+
+   .reviewBtn {
+      width: 46px;
+      height: 46px;
+      padding-left: 11px;
+
+      background-color: $whiteColor;
+
+      border-radius: 50%;
+
+      @include textEdit(Quicksand, 300, 2.5rem, 1);
+      letter-spacing: 0.185em;
+      color: #1B1B1B;
+
+      position: absolute;
+      top: 59%;
+      left: 36%;
+
+      &:first-child {
+         top: 59%;
+         left: 36%;
+      }
+
+      &:nth-child(2) {
+         top: 13%;
+         left: 50%;
+      }
+
+      &:last-child {
+         top: 43%;
+         left: 81%;
+      }
+
+   }
+}
+
+.circules {
+   width: 580.56px;
+   height: 580px;
+   background-image: url('./../../../assets/images/review/circules.png');
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 80px;
+   left: 50%;
+   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
+}
