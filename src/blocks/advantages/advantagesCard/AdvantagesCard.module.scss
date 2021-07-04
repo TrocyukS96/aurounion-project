@@ -1,0 +1,55 @@
+@import './../../../assets/abstracts/mixins.scss';
+@import './../../../assets/abstracts/vars.scss';
+
+.card {
+   max-width: 201px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   text-align: center;
+
+   .imgBox {
+      position: relative;
+
+      &::after {
+         content: "";
+         width: 163.84px;
+         height: 164px;
+         background-image: url('./../../../assets/images/icons/circules.png');
+         background-repeat: no-repeat;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   .content {
+      color: $whiteColor;
+   }
+
+   .title {
+      margin-top: 70px;
+
+      @include textEdit(Quicksand, 300, 1.875rem, 1);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+
+   }
+
+   .text {
+      margin-top: 16px;
+
+      @include textEdit(Quicksand, 300, 1.125rem, 1);
+
+      text-align: center;
+      letter-spacing: 0.05em;
+
+      color: $linkColor;
+   }
+}

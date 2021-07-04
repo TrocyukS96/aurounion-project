@@ -1,0 +1,213 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+
+.about {
+   min-height: 100vh;
+
+   padding-bottom: 20px;
+
+   background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.container {
+   max-width: 1520px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+
+
+
+}
+
+.wrap {
+   margin-top: 220px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.content {
+   max-width: 666px;
+}
+
+.title {
+   margin-bottom: 20px;
+
+   @include textEdit(Quicksand, 700, 3.75rem, 1);
+
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+
+   color: #FFFFFF;
+
+   span {
+      margin-bottom: 7px;
+      display: block;
+
+      @include textEdit(Quicksand, 300, 2.25rem, 1);
+      color: $linkColor;
+   }
+}
+
+.discr {
+   margin-bottom: 50px;
+
+
+   .text {
+      @include textEdit(Quicksand, 300, 1.25rem, 1);
+
+      letter-spacing: 0.05em;
+
+      color: $linkColor;
+
+      &:first-child {
+         margin-bottom: 40px;
+      }
+
+   }
+}
+
+.decisions {
+   max-width: 460px;
+
+   display: flex;
+   justify-content: space-between;
+
+   .item {
+      max-width: 127px;
+
+      @include textEdit(Quicksand, 700, 1.125rem, 1);
+
+      color: $linkColor;
+
+
+
+      span {
+         display: block;
+
+         margin-bottom: 5px;
+
+         @include textEdit(Quicksand, 700, 2.125rem, 1);
+
+         letter-spacing: 0.05em;
+
+         color: $whiteColor;
+      }
+
+
+
+   }
+}
+
+.linkBlock {
+   margin-top: 45px;
+   display: inline-block;
+
+   position: relative;
+
+   &::after {
+      content: "";
+      width: 27px;
+      height: 13px;
+      background-image: url('./../../assets/images/icons/small-arrow.png');
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+   }
+
+   .link {
+      @include textEdit(Quicksand, 700, 1.125rem, 1);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $whiteColor;
+
+
+      &:active {
+         opacity: 0.4;
+      }
+   }
+}
+
+.circle {
+   position: relative;
+}
+
+
+
+.btnBlock {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+}
+
+.playBtn {
+   width: 90px;
+   height: 90px;
+
+   padding: 0 0 0 5px;
+
+   margin-top: 25px;
+
+   border-radius: 50%;
+
+   background-color: rgba(86, 86, 86, 0.3);
+   border: 1px solid rgba(181, 181, 181, 0.1);
+
+}
+
+
+
+.group1,
+.group2,
+.group3 {
+   fill: rgb(255, 255, 255);
+
+}
+
+.text1,
+.text2,
+.text3 {
+   font-size: 40px;
+   fill: white;
+   opacity: 0;
+   @include textEdit(Quicksand, 300, 1.125rem, 1);
+
+   letter-spacing: 0.05em;
+
+   transition: all .3s ease-in;
+
+}
+
+.group1:hover~.text1 {
+   opacity: 1;
+}
+
+.group2:hover~.text2 {
+   opacity: 1;
+}
+
+.group3:hover~.text3 {
+   opacity: 1;
+}

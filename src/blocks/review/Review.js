@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Review.module.scss';
-import TitleCard from '../../components/titleCard/TitleCard';
 import ReviewSlider from './reviewSlider/ReviewSlider';
 
 

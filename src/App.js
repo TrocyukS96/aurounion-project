@@ -5,6 +5,8 @@ import Main from './blocks/main/Main';
 import Models from './blocks/models/Models';
 import Review from './blocks/review/Review';
 import AllModels from './blocks/allModels/AllModels';
+import About from './blocks/about/About';
+import Advantages from './blocks/advantages/Advantages';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
 {/* <Main/> */}
 {/* <Models/> */}
 {/* <Review/> */}
-<AllModels/>
+{/* <AllModels/> */}
+{/* <About/> */}
+<Advantages/>
     </div>
   );
 }

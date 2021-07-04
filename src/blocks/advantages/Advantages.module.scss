@@ -1,0 +1,157 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+
+.advantages {
+   min-height: 100vh;
+
+   padding-bottom: 20px;
+
+   background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.container {
+   max-width: 1660px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+}
+
+.wrap {
+   margin-top: 220px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.content {
+   margin-right: 90px;
+}
+
+.title {
+   margin-bottom: 70px;
+
+   @include textEdit(Quicksand, 700, 3.75rem, 1);
+
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+
+   color: #FFFFFF;
+
+   span {
+      margin-top: 7px;
+      display: block;
+
+      @include textEdit(Quicksand, 300, 2.25rem, 1);
+      color: $linkColor;
+   }
+}
+
+.advantagesList {
+   margin-top: 60px;
+
+   display: flex;
+
+   .advantagesItem {
+      margin-right: 110px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+.form {
+   width: 540px;
+   height: 680px;
+
+   padding: 95px 85px;
+
+   background-color: #232323;
+
+
+   .formTitle {
+      @include textEdit(Quicksand, 300, 2.10rem, 1);
+
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $whiteColor;
+
+      span {
+         margin-bottom: 7px;
+
+         display: block;
+
+         font-size: 1.5rem;
+
+         color: $linkColor;
+
+      }
+   }
+
+   input {
+      height: 60px;
+      width: 100%;
+
+      padding-left: 22px;
+
+      background: rgba(0, 0, 0, 0.2);
+   }
+
+   .inputBox {
+      margin-top: 39px;
+
+   }
+}
+
+.btn {
+   height: 60px;
+   width: 100%;
+
+   margin-top: 30px;
+
+   background-color: $whiteColor;
+
+
+   @include textEdit(Quicksand, 700, 1.125rem, 1);
+
+
+   text-align: center;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+
+   color: #1B1B1B;
+
+}
+
+.formTxt {
+   margin-top: 20px;
+
+   @include textEdit(Quicksand, 300, 0.9rem, 1.4);
+
+   text-align: center;
+   letter-spacing: 0.05em;
+
+   color: $linkColor;
+}
+
+input::placeholder {
+   @include textEdit(Quicksand, 300, 1.125rem, 1);
+
+   letter-spacing: 0.05em;
+
+   color: #B6B6B6;
+
+   opacity: 0.5;
+
+}
