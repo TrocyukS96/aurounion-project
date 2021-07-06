@@ -1,0 +1,101 @@
+@import './../../../assets/abstracts/mixins.scss';
+@import './../../../assets/abstracts/vars.scss';
+
+.card {
+   width: 400px;
+   height: 525px;
+   padding-bottom: 36px;
+   display: flex;
+   flex-direction: column;
+   transition: all .3s ease-in;
+
+   background-color: #232323;
+
+   &:hover {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+   }
+
+   .cardImg {
+      width: 100%;
+
+      margin-bottom: 30px;
+   }
+
+   .content {
+      padding: 0 36px 36px;
+   }
+
+   .date {
+      margin-bottom: 8px;
+
+      @include textEdit(Quicksand, 300, 1.125rem, 1.5);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $linkColor;
+   }
+
+   .title {
+      margin-bottom: 8px;
+
+      @include textEdit(Quicksand, 700, 1.25rem, 1.5);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $whiteColor;
+   }
+
+   .text {
+      margin-bottom: 47px;
+
+      @include textEdit(Quicksand, 300, 1rem, 1.25);
+
+      color: $linkColor;
+
+   }
+
+   .btn {
+
+
+      align-self: flex-end;
+      margin-right: 40px;
+
+      text-align: right;
+
+      position: relative;
+
+      @include textEdit(Quicksand, 300, 1.25rem, 1);
+
+      letter-spacing: 0.05em;
+
+      color: #FFFFFF;
+
+      color: $linkColor;
+
+      &::after {
+         content: "";
+         width: 27px;
+         height: 13px;
+         background-image: url('./../../../assets/images/Services/arrow-icon.png');
+         background-repeat: no-repeat;
+         position: absolute;
+         top: 50%;
+         right: -30px;
+
+
+         transform: translateY(-50%);
+         -webkit-transform: translateY(-50%);
+         -moz-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+      }
+   }
+
+
+}

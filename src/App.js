@@ -9,6 +9,8 @@ import About from './blocks/about/About';
 import Advantages from './blocks/advantages/Advantages';
 import Calculator from './blocks/calculator/Calculator';
 import Services from './blocks/services/Services';
+import News from './blocks/news/News';
+import Footer from './blocks/footer/Footer';
 
 function App() {
   return (
@@ -21,8 +23,9 @@ function App() {
 {/* <About/> */}
 {/* <Advantages/> */}
 {/* <Calculator/> */}
-<Services/>
-
+{/* <Services/> */}
+<News/>
+<Footer/>
     </div>
   );
 }
