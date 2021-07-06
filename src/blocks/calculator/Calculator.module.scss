@@ -1,0 +1,192 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
+
+.calculator {
+   min-height: 100vh;
+
+   padding-bottom: 20px;
+
+   background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.container {
+   max-width: 1660px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+}
+
+.wrap {
+   margin-top: 220px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+
+}
+
+.calcImg {
+   margin-right: 96px;
+}
+
+.calcForm {
+   box-sizing: border-box;
+
+   max-width: 520px;
+
+   .title {
+      margin-bottom: 40px;
+
+      @include textEdit(Quicksand, 700, 3.75rem, 1);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $whiteColor;
+   }
+
+   .inputBox {
+      margin-bottom: 40px;
+
+      display: flex;
+
+      .radioBox {
+         display: flex;
+         align-items: space-between;
+
+         input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+
+            &:checked+label::before {
+               box-sizing: border-box;
+
+               border: 5px solid black;
+
+               background-color: #ffffff;
+            }
+
+            &:checked+label {
+               color: $whiteColor;
+            }
+         }
+
+         label {
+            box-sizing: border-box;
+
+            padding-left: 10px;
+
+            margin-left: 34px;
+
+            @include textEdit(Quicksand, 300, 1.25rem, 1);
+            letter-spacing: 0.05em;
+
+            color: $linkColor;
+
+            position: relative;
+
+            &:active {
+               color: $whiteColor;
+            }
+
+            &::before {
+               content: "";
+               width: 20px;
+               height: 20px;
+
+
+               border-radius: 50%;
+
+               background-color: black;
+
+               position: absolute;
+               top: 50%;
+               left: -33px;
+               transform: translateY(-50%);
+
+            }
+         }
+
+         &:first-child {
+            margin-right: 60px;
+         }
+      }
+   }
+
+   .selectBox {
+      margin-bottom: 48px;
+
+
+
+      .selectTitle {
+         margin-bottom: 20px;
+
+         @include textEdit(Quicksand, 300, 1rem, 1);
+
+         letter-spacing: 0.05em;
+
+
+
+         color: $linkColor;
+
+      }
+
+
+      .formSelect {
+         width: 100%;
+         height: 60px;
+
+         padding-left: 20px;
+
+         color: white;
+
+         background-color: black;
+
+      }
+
+
+
+   }
+
+   .buttons {
+      display: flex;
+
+      &:checked+button {
+         background-color: #fff;
+      }
+
+
+      .btnTime {
+         width: 50%;
+         height: 80px;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         background-color: #232323;
+
+         img {
+            margin-right: 20px;
+         }
+
+
+         .btnSpan {
+            @include textEdit(Quicksand, 700, 1.25rem, 1);
+
+            letter-spacing: 0.05em;
+
+            color: $whiteColor;
+         }
+      }
+
+   }
+}

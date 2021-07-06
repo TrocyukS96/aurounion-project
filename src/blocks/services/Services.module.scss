@@ -1,0 +1,31 @@
+.services {
+   min-height: 100vh;
+
+   background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.container {
+   max-width: 1650px;
+
+   padding: 0 15px 0;
+
+   margin: 0 auto;
+}
+
+.wrap {
+   padding-top: 183px;
+   padding-bottom: 120px;
+
+   display: grid;
+
+   grid-template-columns: repeat(3, auto);
+   grid-auto-flow: row;
+
+   gap: 30px;
+}
