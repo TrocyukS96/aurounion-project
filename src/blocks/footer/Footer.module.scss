@@ -1,4 +1,8 @@
+@import './../../assets/abstracts/mixins.scss';
+@import './../../assets/abstracts/vars.scss';
+
 .footer {
+   padding:61px 0 21px;
 
 
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
@@ -17,5 +21,176 @@
       padding: 0 15px 0;
 
       margin: 0 auto;
+   }
+
+   .top {
+      padding-bottom:51px;
+
+      display:flex;
+      justify-content:space-between;
+   }
+
+   .catalog {
+      .catalogTitle {
+         margin-bottom: 27px;
+
+         @include textEdit(Quicksand, 700, 1.125rem, 1);
+
+         letter-spacing: 0.05em;
+
+         color: $whiteColor;
+      }
+
+      .catalogList {
+         display: grid;
+
+         grid-template-columns: auto auto;
+         grid-template-rows: repeat(5, auto);
+         column-gap: 80px;
+         row-gap: 10px;
+
+         .catalogLink {
+            @include textEdit(Quicksand, 300, 1.125rem, 1);
+
+            color: $linkColor;
+         }
+      }
+   }
+
+   .config {
+      .configItem {
+         margin-bottom: 20px;
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+
+      .configLink {
+         @include textEdit(Quicksand, 700, 1.125rem, 1);
+
+         letter-spacing: 0.05em;
+
+         color: #FFFFFF;
+      }
+   }
+
+   .about {
+      .aboutTitle {
+         @include textEdit(Quicksand, 700, 1.125rem, 1);
+
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+
+         color: $whiteColor;
+
+         span {
+            display: block;
+
+            margin-top: 20px;
+
+            font-weight: 400;
+         }
+      }
+
+      .aboutItem {
+         margin-top: 20px;
+      }
+
+      .aboutLink {
+         @include textEdit(Quicksand, 300, 1.125rem, 1) letter-spacing: 0.05em;
+
+         color: $linkColor;
+
+      }
+   }
+
+   .subscr {
+      .subscrTitle {
+         @include textEdit(Quicksand, 700, 2.75rem, 1) letter-spacing: 0.05em;
+
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+
+         color: $whiteColor;
+
+         span {
+            margin-top: 10px;
+
+            display: block;
+
+            font-size: 2.2rem;
+            font-weight: 400;
+
+            color: $linkColor;
+         }
+      }
+
+      .subscrText {
+         margin-top:20px;
+         margin-bottom:40px;
+
+         @include textEdit(Quicksand, 300, 1.125rem, 1);
+
+         letter-spacing: 0.05em;
+
+         color: $linkColor;
+      }
+
+      form {
+         max-width: 493px;
+         height: 60px;
+
+         display: flex;
+         justify-content: space-between;
+
+         input {
+            height: 100%;
+            width: 50%;
+
+            padding: 15px 0 15px 31px;
+
+            color:$linkColor;
+
+            border:1px solid $linkColor;
+         }
+
+         button {
+            height: 100%;
+            width: 50%;
+
+            color: #000;
+
+            background-color: $whiteColor;
+
+            @include textEdit (Quicksand, 700, 1.25rem, 1)
+            
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            color: #111111;
+         }
+      }
+   }
+
+   .bottom{
+      padding:20px 0;
+
+      border-top:2px solid $whiteColor;
+
+         .wrap{
+         display:flex;
+          justify-content:space-between;
+          align-items:center;
+         }
+         .bottomSpan{
+            @include textEdit(Quicksand, 400, .8rem, 1);
+
+            color: $linkColor;
+         }
+
+
+
    }
 }
