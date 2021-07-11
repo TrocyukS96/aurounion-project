@@ -3,17 +3,9 @@
 
 
 .advantages {
-   min-height: 100vh;
-
    padding-bottom: 20px;
 
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
-
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
 }
 
 .container {
@@ -25,7 +17,7 @@
 }
 
 .wrap {
-   margin-top: 220px;
+   padding: 100px 0;
    display: flex;
    justify-content: space-between;
    align-items: center;

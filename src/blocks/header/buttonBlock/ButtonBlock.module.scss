@@ -10,7 +10,18 @@
       &:last-child {
          margin-right: 0;
       }
+
+      @media screen and (max-width:370px) {
+         margin-right: 1.5rem;
+
+      }
    }
+
+   @media screen and (max-width:610px) {
+      margin: 0 auto;
+
+   }
+
 }
 
 .langBlock {

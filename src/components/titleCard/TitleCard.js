@@ -9,7 +9,10 @@ function TitleCard(props) {
 
          <div className={s.buttonsBlock}>
             <button className={s.btnLeft}>{props.btnTextLeft}</button>
-            <button className={s.btnRight}>{props.btnTextRight}</button>
+            {props.button &&
+               <button className={s.btnRight}>{props.btnTextRight}</button>
+            }
+            
          </div>
       </div>
    );

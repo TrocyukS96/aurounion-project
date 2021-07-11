@@ -1,27 +1,19 @@
 .review {
-   min-height: 100vh;
+   // min-height: 100vh;
 
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
 
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
 }
 
 .container {
    max-width: 1660px;
 
-   padding: 0 15px 0;
+   padding: 0 15px 0 96px;
 
    margin: 0 auto;
 
-   border: 2px solid green;
 }
 
 .wrap {
-   padding-top: 183px;
-   padding-bottom: 120px;
-
+   // padding: 183px 0 120px;
 }

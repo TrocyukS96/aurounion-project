@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './BurgerMenu.module.scss';
 import Logo from '../logo/Logo';
-import close from '../../../assets/images/icons/close-icon.png';
+import styled from 'styled-components';
+import CloseButton from '../burgerButton/closeButton/CloseButton';
 
-function BurgerMenu() {
+const StyledBurgerMenu = styled.div`
+   transform:${({open})=>open ? 'translateX(0)' : 'translateX(-100%)'} ;
+   .close{
+      position: absolute;
+      top: 11px;
+      right: 11px;
+   }
+`
+
+
+
+function BurgerMenu(props) {
+   // const [open, setOpen]=useState(false)
    return (
-      <div className={s.burger}>
+      <StyledBurgerMenu className={s.burger}  open={props.open} >
          <Logo />
          <ul className={s.menuList}>
             <li className={s.menuItem}>
@@ -50,10 +63,8 @@ function BurgerMenu() {
                Частота радиосвязи: 123.9 Мгц - UUCH
             </li>
          </ul>
-         <button className={s.close}>
-            <img src={close} alt="close-icon" />
-         </button>
-      </div>
+         <CloseButton open={props.open} setOpen={props.setOpen}/>
+      </StyledBurgerMenu>
    );
 }
 

@@ -1,12 +1,13 @@
 import React from 'react';
-import s from './Logo';
+import s from './Logo.module.scss';
 import logo from './../../../assets/images/icons/logo.png';
+import {NavLink} from 'react-router-dom';
 
-function Logo() {
+function Logo(props) {
    return (
-      <a className={s.logo} href="#">
+      <NavLink className={s.logo} to="/Main">
          <img src={logo} className={s.logoImg} alt="logo-icon" />
-      </a>
+      </NavLink>
    );
 }
 

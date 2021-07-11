@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './SmallCard.module.scss';
 import Benefit from '../benefit/Benefit';
-
+import { NavLink } from 'react-router-dom';
 import speed from './../../assets/images/icons/speed-icon.png';
 import passenger from './../../assets/images/icons/passenger-icon.png';
 import track from './../../assets/images/icons/track-icon.png';
@@ -23,7 +23,7 @@ function SmallCard(props) {
             <div className={s.item}>
                <Benefit benefitImg={track} benefitTxt="602 км" />
             </div>
-            <button className={s.btn}>Подробнее</button>
+            <NavLink to="/Review" className={s.link}>Подробнее</NavLink>
          </div>
 
       </div>

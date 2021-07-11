@@ -16,20 +16,27 @@ import ReviewSlide from './../reviewSlide/ReviewSlide';
 
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, A11y]);
 
 export default () => {
    return (
       <div className="reviewCorousel">
          <Swiper
-            spaceBetween={5}
+            spaceBetween={20}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
          onSwiper={(swiper) => console.log(swiper)}
          onSlideChange={() => console.log('slide change')}
-         
+         breakpoints={{
+            0:{
+               spaceBetween:40
+            },
+            1200: {
+               
+               spaceBetween:20
+             }
+            }}
          >
             <SwiperSlide>
                <ReviewSlide/>

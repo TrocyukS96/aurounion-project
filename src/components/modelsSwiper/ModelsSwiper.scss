@@ -1,13 +1,43 @@
 .carrousel {
    max-width: 1580px;
 
+   transform: translateX(-50%);
    position: relative;
+   left: 50%;
 
-   border: 2px solid red;
+   @media screen and (max-width:1700px) {
+      max-width: 1200px;
 
+   }
 
+   @media screen and (max-width:1310px) {
+      max-width: 1030px;
 
+   }
 
+   @media screen and (max-width:1140px) {
+      max-width: 840px;
+
+   }
+
+   @media screen and (max-width:930px) {
+      max-width: 530px;
+
+   }
+
+   @media screen and (max-width:630px) {
+      max-width: 430px;
+   }
+
+   @media screen and (max-width:530px) {
+      max-width: 340px;
+   }
+
+   @media screen and (max-width:440px) {
+      max-width: 220px;
+   }
+
+   position: relative;
 
    .swiper-container {
       z-index: 4;
@@ -19,12 +49,20 @@
       top: 71%;
       color: rgba(255, 255, 255, 0.1);
 
+      @media screen and (max-width:980px) {
+         display: none;
+      }
+
    }
 
    .swiper-button-next {
       right: 13px;
       top: 20%;
       color: rgba(255, 255, 255, 0.1);
+
+      @media screen and (max-width:980px) {
+         display: none;
+      }
    }
 
 
@@ -37,6 +75,10 @@
       flex-direction: column;
       top: 37%;
       left: 98%;
+
+      @media screen and (max-width:980px) {
+         display: none;
+      }
    }
 
    .swiper-pagination-bullet {

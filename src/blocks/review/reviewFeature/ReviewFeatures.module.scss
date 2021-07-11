@@ -4,6 +4,12 @@
 .feature {
    margin-bottom: 40px;
    margin-right: 50px;
+
+   @media screen and (max-width:510px) {
+      margin-bottom: 0;
+      margin-right: 20px;
+   }
+
 }
 
 p {
@@ -18,6 +24,11 @@ p {
 
    letter-spacing: 0.05em;
    color: $whiteColor;
+
+   @media screen and (max-width:1370px) {
+      font-size: 2rem;
+   }
+
 }
 
 .text {
@@ -26,4 +37,7 @@ p {
 
    color: rgba(255, 255, 255, 0.55);
 
+   @media screen and (max-width:1370px) {
+      font-size: 1rem;
+   }
 }

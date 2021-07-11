@@ -16,7 +16,7 @@ import model1 from './../../assets/images/models/model1.png';
 import model2 from './../../assets/images/models/model2.png';
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination,A11y]);
 
 export default () => {
    return (
@@ -26,10 +26,23 @@ export default () => {
             slidesPerView={2}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
          onSwiper={(swiper) => console.log(swiper)}
          onSlideChange={() => console.log('slide change')}
-         
+         breakpoints={{
+            0:{
+               slidesPerView:1,
+              
+            },
+            1700: {
+               slidesPerView:1,
+               spaceBetween:70
+             },
+            1900: {
+               slidesPerView:2,
+               spaceBetween:20
+             }
+
+            }}
          >
             <SwiperSlide>
             <BigCard title="Robinson R44" img={model1} />

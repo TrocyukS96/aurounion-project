@@ -3,37 +3,31 @@
 
 
 .models {
-   min-height: 100vh;
+   // min-height: 100vh;
 
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
-
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
 }
 
 .container {
    max-width: 1660px;
 
-   padding: 0 15px 0;
+   padding: 0 15px 0 96px;
 
    margin: 0 auto;
 
-   border: 2px solid green;
 }
 
 .wrap {
-   padding-top: 139px;
-   padding-bottom: 55px;
+   padding-top: 90px;
+   padding-bottom: 70px;
    margin: 0 auto;
+
+   @media screen and(max-width:530px) {
+      padding-top: 30px;
+      padding-bottom: 40px;
+
+   }
 }
-
-
-
-
-
 
 .cards {
    display: flex;
@@ -45,4 +39,121 @@
 
 .paginationBlock {
    color: transparent;
+
+   @media screen and (max-width:780px) {
+      display: none;
+   }
+}
+
+.content {
+   max-width: 775px;
+
+   @media screen and (max-width:780px) {
+      max-width: 460px;
+      text-align: center;
+      margin: 0 auto;
+   }
+
+   .title {
+
+      margin-bottom: .5rem;
+      @include textEdit(Quicksand, 700, 3.75rem, 1);
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: $whiteColor;
+
+      span {
+         font-size: 2.25rem;
+
+         display: block;
+
+         color: $linkColor;
+
+         @media screen and (max-width:780px) {
+            font-size: 1.4rem;
+
+            margin-bottom: 1rem;
+
+         }
+      }
+
+      @media screen and (max-width:780px) {
+         font-size: 1.6rem;
+
+      }
+   }
+
+   .text {
+      margin-bottom: 30px;
+
+      @include textEdit(Quicksand, 400, 1.25rem, 1);
+
+      letter-spacing: 0.05em;
+
+      color: $whiteColor;
+
+   }
+
+   .buttonsBlock {
+      display: flex;
+      align-items: center;
+
+      .btn {
+         width: 360px;
+         height: 60px;
+
+         margin-right: 40px;
+
+         @include textEdit(Quicksand, 700, 1.25rem, 1);
+
+         text-align: center;
+         letter-spacing: 0.05em;
+         text-transform: uppercase;
+
+         color: #1B1B1B;
+         background-color: $whiteColor;
+
+         @media screen and(max-width:760px) {
+            // position: relative;
+            // left: 50%;
+            // transform: translateX(-50%);
+
+            margin-right: 0;
+
+            width: 100%;
+
+         }
+
+      }
+
+      .link {
+         display: block;
+         width: 360px;
+         height: 60px;
+
+         background-color: #1B1B1B;
+
+         @include flexEdit(center, center);
+         @include textEdit(Quicksand, 700, 1.25rem, 1);
+         color: $whiteColor;
+
+         transition: all, .3s ease;
+
+         &:active {
+            background-color: #fff;
+            color: black;
+         }
+
+         @media screen and(max-width:760px) {
+            width: 100%;
+
+         }
+      }
+
+      @media screen and(max-width:760px) {
+         flex-direction: column;
+      }
+   }
 }

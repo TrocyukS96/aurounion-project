@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import s from './Header.module.scss';
 import Logo from './logo/Logo';
 
@@ -9,13 +8,16 @@ import Navigation from './navigation/Navigation';
 import ButtonBlock from './buttonBlock/ButtonBlock';
 
 function Header() {
+   const [open, setOpen ] = useState(false)
+
+
    return (
-      <header className={s.header}>
+      <header className={s.header} >
 
          <div className={s.container}>
             <div className={s.headerWrap}>
-               <BurgerMenu />
-               <BurgerButton />
+               <BurgerMenu open={open} setOpen={setOpen}/>
+               <BurgerButton open={open} setOpen={setOpen}/>
                <Logo />
                <Navigation />
                <ButtonBlock />

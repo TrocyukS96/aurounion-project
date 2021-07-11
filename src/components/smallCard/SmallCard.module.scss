@@ -13,7 +13,7 @@
    -ms-transition: all .3s ease-in;
    -o-transition: all .2s ease-in;
 
-   overflow: hidden;
+   // overflow: hidden;
 
    &:hover {
       transform: scale(1.1);
@@ -62,9 +62,13 @@
 
 }
 
-.btn {
+.link {
+   display: block;
+
    width: 151px;
    height: 42px;
+
+   @include flexEdit(center, center);
 
    @include textEdit(Quicksand, 700, 1.125rem, 1);
 

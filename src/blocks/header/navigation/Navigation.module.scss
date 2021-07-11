@@ -1,7 +1,12 @@
 @import './../../../assets/abstracts/mixins.scss';
 @import './../../../assets/abstracts/vars.scss';
 
-// .navMenu {}
+.navMenu {
+   @media screen and (max-width:1480px) {
+      display: none;
+
+   }
+}
 
 .navList {
    display: flex;

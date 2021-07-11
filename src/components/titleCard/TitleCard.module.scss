@@ -3,6 +3,12 @@
 
 .card {
    max-width: 775px;
+
+   @media screen and(max-width:980px) {
+      max-width: 510px;
+
+      text-align: center;
+   }
 }
 
 .title {
@@ -15,6 +21,19 @@
    text-transform: uppercase;
 
    color: $whiteColor;
+
+   @media screen and(max-width:980px) {
+      font-size: 2rem;
+
+      margin-bottom: 1.5rem;
+
+
+   }
+
+   @media screen and(max-width:510px) {
+      font-size: 1.6rem;
+
+   }
 }
 
 .text {
@@ -41,6 +60,16 @@
    text-transform: uppercase;
 
    color: $whiteColor;
+
+   @media screen and(max-width:510px) {
+      width: 240px;
+
+      font-size: 1rem;
+   }
+
+   @media screen and(max-width:360px) {
+      width: 200px;
+   }
 
 }
 

@@ -1,30 +1,31 @@
 import React from 'react';
 import s from './Navigation.module.scss';
+import {NavLink} from 'react-router-dom';
 
 function Navigation() {
    return (
       <nav className={s.navMenu}>
          <ul className={s.navList}>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>Модели</a>
+               <NavLink to="/Models" className={s.navLink}>Модели</NavLink>
             </li>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>Обзор вертолетов</a>
+               <NavLink to="/Review" className={s.navLink}>Обзор вертолетов</NavLink>
             </li>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>О компании</a>
+               <NavLink to="/About" className={s.navLink}>О компании</NavLink>
             </li>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>Преимущества</a>
+               <NavLink to="/Advantages" className={s.navLink}>Преимущества</NavLink>
             </li>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>Калькулятор</a>
+               <NavLink to="/Calculator" className={s.navLink}>Калькулятор</NavLink>
             </li>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>Услуги</a>
+               <NavLink to="/Services" className={s.navLink}>Услуги</NavLink>
             </li>
             <li className={s.navItem}>
-               <a href="#" className={s.navLink}>Новости</a>
+               <NavLink to="/News" className={s.navLink}>Новости</NavLink>
             </li>
 
          </ul>

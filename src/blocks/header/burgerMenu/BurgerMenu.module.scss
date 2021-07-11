@@ -4,13 +4,18 @@
 .burger {
    //display: none;
    width: 619px;
-   height: 100vh;
+   height: 100%;
+
+
    padding: 42px 0 51px 64px;
    position: fixed;
    top: 0;
    bottom: 0;
    left: 0;
    z-index: 10;
+
+   overflow: auto;
+
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.25);
    transition: all .3s ease-in-out;
@@ -23,6 +28,10 @@
    -moz-transform: translateX(-100%);
    -ms-transform: translateX(-100%);
    -o-transform: translateX(-100%);
+
+   @media screen and (max-width:780px) {
+      width: 100%;
+   }
 }
 
 
@@ -122,10 +131,4 @@
          color: red;
       }
    }
-}
-
-.close {
-   position: absolute;
-   top: 11px;
-   right: 11px;
 }

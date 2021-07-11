@@ -3,17 +3,9 @@
 
 
 .calculator {
-   min-height: 100vh;
-
    padding-bottom: 20px;
 
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
-
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
 }
 
 .container {
@@ -25,11 +17,9 @@
 }
 
 .wrap {
-   margin-top: 220px;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
+   padding: 100px 0;
 
+   @include flexEdit(flex-start, center)
 }
 
 .calcImg {
@@ -188,5 +178,11 @@
          }
       }
 
+   }
+
+   .formTxt {
+      margin-top: 10px;
+
+      color: $linkColor;
    }
 }

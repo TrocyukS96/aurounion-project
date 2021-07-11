@@ -1,6 +1,16 @@
 .reviewCorousel {
    .swiper-container {
       z-index: 4;
+      padding-bottom: 280px;
+      padding-top: 50px;
+
+      @media screen and (max-width:1370px) {
+         padding-bottom: 480px;
+      }
+
+      @media screen and (max-width:780px) {
+         padding-bottom: 200px;
+      }
    }
 
    .swiper-button-prev {
@@ -9,12 +19,22 @@
       top: 71%;
       color: rgba(255, 255, 255, 0.1);
 
+      @media screen and (max-width:780px) {
+         display: none;
+
+      }
+
    }
 
    .swiper-button-next {
       right: 13px;
       top: 20%;
       color: rgba(255, 255, 255, 0.1);
+
+      @media screen and (max-width:780px) {
+         display: none;
+
+      }
    }
 
 
@@ -27,6 +47,11 @@
       flex-direction: column;
       top: 37%;
       left: 98%;
+
+      @media screen and (max-width:780px) {
+         display: none;
+
+      }
    }
 
    .swiper-pagination-bullet {
