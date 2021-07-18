@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './Navigation.module.scss';
 import {NavLink} from 'react-router-dom';
 
+// const StyledNavigation =styled.nav`
+//    @media screen and (max-width:1480px) {
+//       display: none;
+
+//    }
+//    .NavLink{
+//       color:${({ open }) => open ? 'white' : 'grey'};
+//    }
+// `
+
+
 function Navigation() {
+
    return (
       <nav className={s.navMenu}>
          <ul className={s.navList}>
@@ -10,7 +22,7 @@ function Navigation() {
                <NavLink to="/Models" className={s.navLink}>Модели</NavLink>
             </li>
             <li className={s.navItem}>
-               <NavLink to="/Review" className={s.navLink}>Обзор вертолетов</NavLink>
+               <NavLink to="/Review" className={s.navLink} >Обзор вертолетов</NavLink>
             </li>
             <li className={s.navItem}>
                <NavLink to="/About" className={s.navLink}>О компании</NavLink>

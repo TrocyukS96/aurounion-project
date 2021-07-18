@@ -31,8 +31,27 @@
    display: grid;
    grid-template-columns: auto auto auto auto;
    grid-auto-flow: row;
+   justify-content: center;
 
    gap: 26px;
+
+   @media screen and(max-width:1920px) {
+      grid-template-columns: auto auto auto;
+   }
+
+   @media screen and(max-width:1380px) {
+      grid-template-columns: auto auto;
+      column-gap: 60px;
+   }
+
+   @media screen and(max-width:980px) {
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+   }
+
+   @media screen and(max-width:980px) {
+      grid-template-columns: auto;
+   }
 
 }
 

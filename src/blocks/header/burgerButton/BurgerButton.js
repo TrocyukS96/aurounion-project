@@ -28,7 +28,7 @@ const StyledBurger = styled.div`
       width: 43px;
       height: 30px;
 
-      background-color:${({ open }) => open ? 'yellow' : 'green'};
+      background-color:${({ open }) => open ? 'yellow' : 'transparent'};
    
       cursor: pointer;
    
@@ -84,8 +84,8 @@ function BurgerButton(props) {
    // const [open, setOpen ] = useState(false)
    return (
       <>
-      <StyledBurger onClick={() => props.setOpen(!props.open)}>
-         <button className='burgerButton'>
+      <StyledBurger >
+         <button className='burgerButton' onClick={() => props.setOpen(!props.open)}>
             <img className='burgerImg' src={burgerImg} alt="burger-icon" />
          </button>
          <div className='arrowBlock'>

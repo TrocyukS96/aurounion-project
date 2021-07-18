@@ -74,26 +74,6 @@ function About() {
                            stroke-dashoffset="-600"
                            stroke-dasharray="660"
                         />
-                        {/* small circles */}
-
-                        {/* <circle
-                           r="15"
-                           cx="168"
-                           cy="135"
-                           fill="white"
-                           stroke="white"
-                           stroke-width="1"
-                        />
-
-                        <circle
-                           r="15"
-                           cx="619"
-                           cy="235"
-                           fill="white"
-                           stroke="white"
-                           stroke-width="1"
-                        /> */}
-
                         <defs>
                            <g id="group1" >
                               <circle className={s.circle1}
@@ -124,6 +104,7 @@ function About() {
                         <button className={s.playBtn}>
                            <img src={playIcon} alt="play-image" className={s.playImg} />
                         </button>
+                        
                      </div>
                   </div>
                </div>

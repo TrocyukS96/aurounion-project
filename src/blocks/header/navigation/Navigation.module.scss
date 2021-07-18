@@ -1,12 +1,7 @@
 @import './../../../assets/abstracts/mixins.scss';
 @import './../../../assets/abstracts/vars.scss';
 
-.navMenu {
-   @media screen and (max-width:1480px) {
-      display: none;
-
-   }
-}
+.navMenu {}
 
 .navList {
    display: flex;
@@ -22,13 +17,15 @@
       margin-right: 0;
    }
 
-   &:hover {
-      transform: scale(1.2);
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      -o-transform: scale(1.2);
-   }
+   // transform: rotate(40deg);
+
+   // &:hover {
+   //    transform: scale(1.2);
+   //    -webkit-transform: scale(1.2);
+   //    -moz-transform: scale(1.2);
+   //    -ms-transform: scale(1.2);
+   //    -o-transform: scale(1.2);
+   // }
 
 
 }
@@ -38,8 +35,13 @@
    color: $linkColor;
 
 
+   // &:visited {
+   //    color: $whiteColor;
+   // }
 
-   &:active {
-      color: $whiteColor;
+   .active {
+      color: white;
+
+      font-size: 1.1rem;
    }
 }

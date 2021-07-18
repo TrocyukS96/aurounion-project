@@ -8,7 +8,7 @@ import Navigation from './navigation/Navigation';
 import ButtonBlock from './buttonBlock/ButtonBlock';
 
 function Header() {
-   const [open, setOpen ] = useState(false)
+   const [open, setOpen] = useState(false)
 
 
    return (
@@ -16,10 +16,10 @@ function Header() {
 
          <div className={s.container}>
             <div className={s.headerWrap}>
-               <BurgerMenu open={open} setOpen={setOpen}/>
-               <BurgerButton open={open} setOpen={setOpen}/>
-               <Logo />
-               <Navigation />
+               <BurgerMenu open={open} setOpen={setOpen} />
+               <BurgerButton open={open} setOpen={setOpen} />
+               <div className={s.logoBox}><Logo /></div>
+               <Navigation open={open} setOpen={setOpen}/>
                <ButtonBlock />
             </div>
          </div>

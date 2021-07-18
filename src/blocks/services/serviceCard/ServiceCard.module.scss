@@ -10,6 +10,19 @@
    background-color: #232323;
    transition: all 0.3s ease-in;
 
+   @media screen and(max-width:580px) {
+      max-width: 400px;
+      height: 100%;
+   }
+
+   @media screen and(max-width:480px) {
+      padding: 30px 20px 20px;
+   }
+
+   @media screen and(max-width:380px) {
+      max-width: 220px;
+   }
+
    &:hover {
       transform: scale(1.1);
    }
@@ -19,6 +32,11 @@
 
       display: flex;
       align-items: center;
+
+      @media screen and(max-width:480px) {
+         flex-direction: column;
+         justify-content: center;
+      }
 
       .topImg {
          margin-right: 10px;
@@ -40,6 +58,26 @@
             font-size: 1.5rem;
 
             color: $linkColor;
+
+            @media screen and(max-width:580px) {
+               font-size: 1.4rem;
+            }
+
+            @media screen and(max-width:380px) {
+               font-size: 1rem;
+            }
+         }
+
+         @media screen and(max-width:580px) {
+            font-size: 1.4rem;
+         }
+
+         @media screen and(max-width:480px) {
+            margin-top: 20px;
+         }
+
+         @media screen and(max-width:380px) {
+            font-size: 1.1rem;
          }
       }
    }
@@ -64,6 +102,9 @@
 
       position: relative;
 
+
+      color: $whiteColor;
+
       &::after {
          content: "";
          width: 27px;
@@ -82,4 +123,6 @@
          -o-transform: translateY(-50%);
       }
    }
+
+
 }

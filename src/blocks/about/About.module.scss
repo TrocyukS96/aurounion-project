@@ -7,12 +7,15 @@
 
    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
 
+   @media screen and(max-width:900px) {
+      padding-bottom: 320px;
+   }
 }
 
 .container {
    max-width: 1520px;
 
-   padding: 0 15px 0;
+   padding: 0 15px 0 96px;
 
    margin: 0 auto;
 
@@ -25,10 +28,32 @@
    padding-bottom: 90px;
 
    @include flexEdit(space-between, center);
+
+
+   @media screen and (max-width:1320px) {
+      display: block;
+
+      text-align: center;
+   }
+
+   @media screen and (max-width:780px) {
+      padding: 30px 0;
+   }
 }
 
 .content {
    max-width: 666px;
+
+   @media screen and (max-width:1320px) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+   }
+
 }
 
 .title {
@@ -47,6 +72,14 @@
 
       @include textEdit(Quicksand, 300, 2.25rem, 1);
       color: $linkColor;
+
+      @media screen and (max-width:780px) {
+         font-size: 1.4rem;
+      }
+   }
+
+   @media screen and (max-width:780px) {
+      font-size: 1.6rem;
    }
 }
 
@@ -95,8 +128,21 @@
          color: $whiteColor;
       }
 
+      @media screen and (max-width:510px) {
+         margin-bottom: 20px;
+      }
+   }
 
+   @media screen and (max-width:1320px) {
+      max-width: 100%;
+   }
 
+   @media screen and (max-width:510px) {
+      flex-wrap: wrap;
+
+      text-align: center;
+
+      justify-content: center;
    }
 }
 
@@ -130,11 +176,22 @@
       &:active {
          opacity: 0.4;
       }
+
+      @media screen and (max-width:510px) {
+         font-size: .8rem;
+      }
    }
+
 }
 
 .circle {
    position: relative;
+
+   svg {
+      @media screen and(max-width:900px) {
+         display: none;
+      }
+   }
 }
 
 
@@ -152,6 +209,29 @@
    -moz-transform: translate(-50%, -50%);
    -ms-transform: translate(-50%, -50%);
    -o-transform: translate(-50%, -50%);
+
+   // &::after {
+   //    content: "";
+   //    width: 400px;
+   //    height: 400px;
+   //    background-image: url('./../../assets/images/about/circleGroup.png');
+   //    background-repeat: no-repeat;
+   //    background-position: center;
+   //    position: absolute;
+   //    top: 50%;
+   //    left: 50%;
+   //    transform: translate(-50%, -50%);
+   //    -webkit-transform: translate(-50%, -50%);
+   //    -moz-transform: translate(-50%, -50%);
+   //    -ms-transform: translate(-50%, -50%);
+   //    -o-transform: translate(-50%, -50%);
+   // }
+
+   @media screen and(max-width:900px) {
+      padding-top: 400px;
+
+
+   }
 }
 
 .playBtn {
